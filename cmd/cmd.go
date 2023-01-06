@@ -70,7 +70,7 @@ func getSampleID() (samples []string) {
 		tmp := reg.FindSubmatch([]byte(name))
 		if tmp != nil {
 			idx := string(tmp[1])
-			ans := fmt.Sprintf("out%v.txt", idx)
+			ans := fmt.Sprintf("ans%v.txt", idx)
 			if _, err := os.Stat(ans); err == nil {
 				samples = append(samples, idx)
 			}
