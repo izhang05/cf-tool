@@ -7,8 +7,6 @@ import (
 	"path/filepath"
 	"regexp"
 
-	"github.com/docopt/docopt-go"
-
 	"cf-tool/client"
 	"cf-tool/config"
 	"cf-tool/util"
@@ -25,19 +23,19 @@ func Eval(opts docopt.Opts) error {
 	}
 	if Args.Config {
 		return Config()
-	} else if Args.Submit {
+	} else if Args.Submit || Args.S {
 		return Submit()
 	} else if Args.List {
 		return List()
-	} else if Args.Parse {
+	} else if Args.Parse || Args.P {
 		return Parse()
 	} else if Args.Gen {
 		return Gen()
-	} else if Args.Test {
+	} else if Args.Test || Args.T {
 		return Test()
 	} else if Args.Watch {
 		return Watch()
-	} else if Args.Open {
+	} else if Args.Open || Args.O {
 		return Open()
 	} else if Args.Stand {
 		return Stand()

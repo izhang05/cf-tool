@@ -8,7 +8,6 @@ import (
 
 	"cf-tool/client"
 	"cf-tool/config"
-	"github.com/docopt/docopt-go"
 )
 
 // ParsedArgs parsed arguments
@@ -23,12 +22,16 @@ type ParsedArgs struct {
 	Version   string   `docopt:"{version}"`
 	Config    bool     `docopt:"config"`
 	Submit    bool     `docopt:"submit"`
+	S         bool     `docopt:"s"`
 	List      bool     `docopt:"list"`
 	Parse     bool     `docopt:"parse"`
+	P         bool     `docopt:"p"`
 	Gen       bool     `docopt:"gen"`
 	Test      bool     `docopt:"test"`
+	T         bool     `docopt:"t"`
 	Watch     bool     `docopt:"watch"`
 	Open      bool     `docopt:"open"`
+	O         bool     `docopt:"o"`
 	Stand     bool     `docopt:"stand"`
 	Sid       bool     `docopt:"sid"`
 	Race      bool     `docopt:"race"`
