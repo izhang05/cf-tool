@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"github.com/PuerkitoBio/goquery"
 	"github.com/fatih/color"
+	"github.com/k0kubun/go-ansi"
 	"os"
 	"path/filepath"
 	"strings"
