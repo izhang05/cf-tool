@@ -44,7 +44,7 @@ func Eval(opts docopt.Opts) error {
 		return Stand()
 	} else if Args.Sid {
 		return Sid()
-	} else if Args.Race {
+	} else if Args.Race || Args.R {
 		return Race()
 	} else if Args.Pull {
 		return Pull()

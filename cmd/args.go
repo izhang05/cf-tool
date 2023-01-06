@@ -36,6 +36,7 @@ type ParsedArgs struct {
 	Stand     bool     `docopt:"stand"`
 	Sid       bool     `docopt:"sid"`
 	Race      bool     `docopt:"race"`
+	R         bool     `docopt:"r"`
 	Pull      bool     `docopt:"pull"`
 	Clone     bool     `docopt:"clone"`
 	Upgrade   bool     `docopt:"upgrade"`

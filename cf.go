@@ -29,15 +29,20 @@ If you want to compete, the best command is "cf race"
 Usage:
   cf config
   cf submit [-f <file>] [<specifier>...]
+  cf s [-f <file>] [<specifier>...]
   cf list [<specifier>...]
   cf parse [<specifier>...]
+  cf p [<specifier>...]
   cf gen [<alias>]
   cf test [<file>]
+  cf t [<file>]
   cf watch [all] [<specifier>...]
   cf open [<specifier>...]
+  cf o [<specifier>...]
   cf stand [<specifier>...]
   cf sid [<specifier>...]
   cf race [<specifier>...]
+  cf r [<specifier>...]
   cf pull [ac] [<specifier>...]
   cf clone [ac] [<handle>]
   cf upgrade
@@ -103,7 +108,7 @@ Examples:
                        "a" of contest 100.
   cf pull              Pull the latest codes of current problem into current
                        path.
-  cf clone dianhsu      Clone all codes of dianhsu.
+  cf clone izhang      Clone all codes of izhang.
   cf upgrade           Upgrade the "cf" to the latest version from GitHub.
 File:
   cf will save some data in some files:
@@ -113,7 +118,7 @@ File:
 Template:
   You can insert some placeholders into your template code. When generate a code
   from the template, cf will replace all placeholders by following rules:
-  $%U%$   Handle (e.g. dianhsu)
+  $%U%$   Handle (e.g. izhang)
   $%Y%$   Year   (e.g. 2019)
   $%M%$   Month  (e.g. 04)
   $%D%$   Day    (e.g. 09)
