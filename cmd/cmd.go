@@ -7,6 +7,8 @@ import (
 	"path/filepath"
 	"regexp"
 
+	"github.com/docopt/docopt-go"
+
 	"cf-tool/client"
 	"cf-tool/config"
 	"cf-tool/util"
@@ -62,13 +64,13 @@ func getSampleID() (samples []string) {
 	if err != nil {
 		return
 	}
-	reg := regexp.MustCompile(`testI(\d+).txt`)
+	reg := regexp.MustCompile(`in%v.txt`)
 	for _, path := range paths {
 		name := path.Name()
 		tmp := reg.FindSubmatch([]byte(name))
 		if tmp != nil {
 			idx := string(tmp[1])
-			ans := fmt.Sprintf("testO%v.txt", idx)
+			ans := fmt.Sprintf("out%v.txt", idx)
 			if _, err := os.Stat(ans); err == nil {
 				samples = append(samples, idx)
 			}

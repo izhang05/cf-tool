@@ -8,6 +8,7 @@ import (
 
 	"cf-tool/client"
 	"cf-tool/config"
+	"github.com/docopt/docopt-go"
 )
 
 // ParsedArgs parsed arguments
