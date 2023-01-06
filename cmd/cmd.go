@@ -3,6 +3,7 @@ package cmd
 import (
 	"errors"
 	"fmt"
+	"io/ioutil"
 	"os"
 	"path/filepath"
 	"regexp"
@@ -60,11 +61,11 @@ func getSampleID() (samples []string) {
 	if err != nil {
 		return
 	}
-	paths, err := os.ReadDir(path)
+	paths, err := ioutil.ReadDir(path)
 	if err != nil {
 		return
 	}
-	reg := regexp.MustCompile(`in%v.txt`)
+	reg := regexp.MustCompile(`in(\d+).txt`)
 	for _, path := range paths {
 		name := path.Name()
 		tmp := reg.FindSubmatch([]byte(name))
